@@ -1,9 +1,14 @@
 package payments
 
+import (
+	"gorm.io/gorm"
+)
+
 type CryptoPayment struct {
+	gorm.Model
 	Payment
-	amount           float32 `json: "amount"`
-	currency         string  `json: "currency"`
-	transaction_hash string  `json: "transaction_hash"`
-	wallet_address   string  `json: "wallet_address"`
+	Amount           float32 `json: "amount"`
+	Currency         string  `json: "currency"`
+	Transaction_hash string  `json: "transaction_hash"`
+	WalletAddress   string  `json: "wallet_address"`
 }

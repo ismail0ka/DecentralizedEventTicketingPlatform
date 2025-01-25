@@ -1,9 +1,14 @@
 package payments
 
+import (
+	"gorm.io/gorm"
+)
+
 type MonetaryPayment struct {
+	gorm.Model
 	Payment
-	amount          float32 `json: "amount"`
-	currency        string  `json: "currency"`
-	transaction_id  string  `json: "transaction_id"`
-	payment_gateway string  `json: "payment_gateway"`
+	Amount          float32 `json: "amount"`
+	Currency        string  `json: "currency"`
+	TransactionId  string  `json: "transaction_id"`
+	PaymentGateway string  `json: "payment_gateway"`
 }
